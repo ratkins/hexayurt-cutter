@@ -27,9 +27,9 @@ define handle {
 }
 
 define bladeSlot {
-	option pos unit
+	option thickness unit
 	cube {
-		position pos
+		position thickness 0
 		size 1.5 150 blade
 		orientation -0.33 0 0
 	}
@@ -40,12 +40,12 @@ handle {
 }
 
 bladeSlot {
-	pos unit
+	thickness unit
 }
 bladeSlot {
-	pos (1.5 * unit)
+	thickness (1.5 * unit)
 }
 bladeSlot {
-	pos (2 * unit)
+	thickness (2 * unit)
 }
 
