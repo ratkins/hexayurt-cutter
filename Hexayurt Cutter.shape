@@ -26,12 +26,26 @@ define handle {
 	}
 }
 
+define bladeSlot {
+	option pos unit
+	cube {
+		position pos
+		size 1.5 150 blade
+		orientation -0.33 0 0
+	}
+}
+
 handle {
 	position ((2.5 * unit)/2 - 5) ((2.5 * unit)/2 - 5) 
 }
-cube {
-	size 1.5 150 blade
-	orientation -0.25 0 0
-}
 
+bladeSlot {
+	pos unit
+}
+bladeSlot {
+	pos (1.5 * unit)
+}
+bladeSlot {
+	pos (2 * unit)
+}
 
