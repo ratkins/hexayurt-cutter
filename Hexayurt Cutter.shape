@@ -29,10 +29,31 @@ define handle {
 define bladeSlot {
 	option boardThickness unit
 	option offset 0
+	option angle 0.33
 	cube {
 		position boardThickness 0 offset
 		size 1.5 150 blade
-		orientation -0.33 0 0
+		orientation angle 0 0
+	}
+}
+
+define slotSet {
+	option offset 0
+	option angle 0
+	bladeSlot {
+		boardThickness unit
+		offset offset
+		angle angle
+	}
+	bladeSlot {
+		boardThickness (1.5 * unit)
+		offset offset
+		angle angle
+	}
+	bladeSlot {
+		boardThickness (2 * unit)
+		offset offset
+		angle angle
 	}
 }
 
@@ -40,16 +61,13 @@ handle {
 	position ((2.5 * unit)/2 - 5) ((2.5 * unit)/2 - 5) 
 }
 
-bladeSlot {
-	boardThickness unit
+slotSet {
 	offset 20
+	angle -0.33333
 }
-bladeSlot {
-	boardThickness (1.5 * unit)
-	offset 20
-}
-bladeSlot {
-	boardThickness (2 * unit)
-	offset 20
+
+slotSet {
+	offset -20
+	angle -0.16666
 }
 
