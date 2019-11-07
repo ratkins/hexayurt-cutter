@@ -1,0 +1,37 @@
+// ShapeScript document
+
+detail 32
+
+// for cm
+//define unit 10
+
+// for inches
+define unit 25.4
+
+// for 9mm snap-off blade
+define blade 9
+
+// for 18mm snap-off blade
+define blade 18
+
+define handle {
+	difference {
+		cube {
+			size (2.5 * unit) (2.5 * unit) 150
+		}
+		cube {
+			size (2.5 * unit) (2.5 * unit) 150
+			position 5 5
+		}
+	}
+}
+
+handle {
+	position ((2.5 * unit)/2 - 5) ((2.5 * unit)/2 - 5) 
+}
+cube {
+	size 1.5 150 blade
+	orientation -0.25 0 0
+}
+
+
