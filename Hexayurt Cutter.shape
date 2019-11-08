@@ -96,7 +96,7 @@ difference {
 	slotSet {
 		offset -20
 		angle -0.41666
-		heelDepth -15
+		heelDepth -13
 	}
 }
 
