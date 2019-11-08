@@ -14,6 +14,12 @@ define blade 9
 // for 18mm snap-off blade
 define blade 18
 
+// blade slot thickness
+define bladeThickness 2
+
+// Blade sweep angle
+define bladeSweep 50
+
 define handle {
 	difference {
 		cube {
@@ -30,10 +36,24 @@ define bladeSlot {
 	option boardThickness unit
 	option offset 0
 	option angle 0.33
-	cube {
+	
+	loft {
 		position boardThickness 0 offset
-		size 1.5 150 blade
-		orientation angle 0 0
+		orientation angle 0 0.5 
+		path {
+			point -bladeThickness/2 -blade/2 -75
+			point bladeThickness/2 -blade/2 -75
+			point bladeThickness/2 blade/2 -75
+			point -bladeThickness/2 blade/2 -75
+			point -bladeThickness/2 -blade/2 -75
+		}
+		path {
+			point -bladeThickness/2 -blade/2 + bladeSweep 75
+			point bladeThickness/2 -blade/2 + bladeSweep 75
+			point bladeThickness/2 blade/2 + bladeSweep 75
+			point -bladeThickness/2 blade/2 + bladeSweep 75
+			point -bladeThickness/2 -blade/2 + bladeSweep 75
+		}
 	}
 }
 
@@ -42,7 +62,7 @@ define slotSet {
 	option angle 0
 	bladeSlot {
 		boardThickness unit
-		offset offset
+		offset offset 
 		angle angle
 	}
 	bladeSlot {
