@@ -36,16 +36,17 @@ define bladeSlot {
 	option boardThickness unit
 	option offset 0
 	option angle 0.33
+	option heelDepth -15
 	
 	loft {
 		position boardThickness 0 offset
 		orientation angle 0 0.5 
 		path {
-			point -bladeThickness/2 (-blade/2 - bladeSweep/2) -75
-			point bladeThickness/2 (-blade/2 - bladeSweep/2) -75
-			point bladeThickness/2 (blade/2 - bladeSweep/2) -75
-			point -bladeThickness/2 (blade/2 - bladeSweep/2) -75
-			point -bladeThickness/2 (-blade/2 - bladeSweep/2) -75
+			point -bladeThickness/2 (-blade/2 - bladeSweep/2) heelDepth
+			point bladeThickness/2 (-blade/2 - bladeSweep/2) heelDepth
+			point bladeThickness/2 (blade/2 - bladeSweep/2) heelDepth
+			point -bladeThickness/2 (blade/2 - bladeSweep/2) heelDepth
+			point -bladeThickness/2 (-blade/2 - bladeSweep/2) heelDepth
 		}
 		path {
 			point -bladeThickness/2 (-blade/2 + bladeSweep/2) 75
@@ -60,6 +61,7 @@ define bladeSlot {
 define slotSet {
 	option offset 0
 	option angle 0
+	option heelDepth -15
 	bladeSlot {
 		boardThickness unit
 		offset offset 
@@ -77,20 +79,25 @@ define slotSet {
 	}
 }
 
-handle {
-	position ((3 * unit)/2 - 5) ((3 * unit)/2 - 5) 
+difference {
+	handle {
+		position ((3 * unit)/2 - 5) ((3 * unit)/2 - 5) 
+	}
+	
+	// What we actually want to set here are the opposite angles to the bevels we wish to make
+	// — we want 30° and 15°, so we need to specify 60° × 1/180 = 0.33333 and 75° × 1/180 = 0.41666
+	
+	slotSet {
+		offset 20
+		angle -0.33333
+		heelDepth -7
+	}
+	
+	slotSet {
+		offset -20
+		angle -0.41666
+		heelDepth -15
+	}
 }
 
-// What we actually want to set here are the opposite angles to the bevels we wish to make
-// — we want 30° and 15°, so we need to specify 60° × 1/180 = 0.33333 and 75° × 1/180 = 0.41666
-
-slotSet {
-	offset 20
-	angle -0.33333
-}
-
-slotSet {
-	offset -20
-	angle -0.41666
-}
 
