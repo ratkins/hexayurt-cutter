@@ -17,10 +17,10 @@ define blade 18
 define handle {
 	difference {
 		cube {
-			size (2.5 * unit) (2.5 * unit) 150
+			size (3 * unit) (3 * unit) 150
 		}
 		cube {
-			size (2.5 * unit) (2.5 * unit) 150
+			size (3 * unit) (3 * unit) 150
 			position 5 5
 		}
 	}
@@ -58,7 +58,7 @@ define slotSet {
 }
 
 handle {
-	position ((2.5 * unit)/2 - 5) ((2.5 * unit)/2 - 5) 
+	position ((3 * unit)/2 - 5) ((3 * unit)/2 - 5) 
 }
 
 // What we actually want to set here are the opposite angles to the bevels we wish to make
