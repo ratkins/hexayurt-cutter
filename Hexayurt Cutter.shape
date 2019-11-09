@@ -9,13 +9,13 @@ detail 32
 define unit 25.4
 
 // for 9mm snap-off blade
-//define blade 9
+//define blade 10
 
 // for 18mm snap-off blade
-define blade 18
+define blade 20
 
 // blade slot thickness
-define bladeThickness 1.5
+define bladeThickness 0.5
 
 // Blade sweep angle
 define bladeSweep 50
