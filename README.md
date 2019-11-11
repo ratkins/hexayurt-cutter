@@ -1,5 +1,5 @@
 # Hexayurt Cutter
-The [Hexayurt](https://www.appropedia.org/Hexayurt_playa) is a shelter made from standard-sized sheets of 8' by 4' building material, with no waste. Versions made out of [foil-laminated polyisocyanurate insulation board](https://en.wikipedia.org/wiki/Polyisocyanurate) are popular shelters at [Burning Man](https://burningman.org).
+The [Hexayurt](https://www.appropedia.org/Hexayurt_playa) is a shelter made from standard-sized sheets of 8' by 4' building material, with no waste. Versions made out of [foil-laminated polyisocyanurate insulation board](https://en.wikipedia.org/wiki/Polyisocyanurate) are popular at [Burning Man](https://burningman.org).
 
 Mitring the edges of the panels allows the yurt to fit together better, improving insulation, dust- and light-proofing. Doing so with hand tools is very tricky, until now.
 
