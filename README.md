@@ -5,6 +5,9 @@ Mitring the edges of the panels allows the yurt to fit together better, improvin
 
 3D printing this cutter and fitting a [standard 18mm snap-off blade](https://www.amazon.com/s?k=18mm+snap+off+blade&crid=1X0J38O0XKV1W&sprefix=18mm+snap%2Caps%2C228&ref=nb_sb_ss_i_3_9) into the appropriate slot allows you to simply push the cutter over the edge of the board and cut the perfect angle.
 
+![Render of Hexayurt Cutter](shapescript-illustration.jpg)
+![Image of printed Hexayurt Cutter](example-print.jpg)
+
 ## How to make
 Download the STL file for the measurement system you're using and slice it as appropriate for your printer. Print!
 
