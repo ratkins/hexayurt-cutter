@@ -12,3 +12,8 @@ Download the STL file for the measurement system you're using and slice it as ap
 There are two sets of slots. One set will cut a 15° angle, the other 30°. Within each set there are slots for different thicknesses of board. Slide a snap-off blade into the appropriate slot and push it along the edge of the board to make a perfect cut.
 
 For a "standard" 12' Hexayurt, you want the wall board 4' edges to all be at 30°, with the 8' edges left square. The hypotenuse of each roof triangle should be cut to 15° and the bottom edge to 30°. **NOTE: this is per the folding hexayurt [instructions on Appropedia](https://www.appropedia.org/Hexayurt_playa#The_Folding_Hexayurt), but I have not tested this first hand. If you have, could you please validate my instructions or send any corrections**.
+
+## Contributing
+The source file format is .shape, for the macOS procedural modeling prorgram [ShapeScript](https://apps.apple.com/us/app/shapescript/id1441135869?mt=12). It's kind of like OpenSCAD (very) Lite. It's just a text file and should be self-explanatory. You can download ShapeScript yourself for free on macOS and try out any modifications. I'll re-export the STLs and upload them here upon any meaningful change.
+
+Suggestions and PRs are welcomed, especially from people who've printed one and tried it on various materials.
